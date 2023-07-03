@@ -24,8 +24,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "react-native-linear-gradient": "^2.7.3",
-    "react-native-svg": "^13.9.0"
+    "react-native-linear-gradient": "^2.7.3"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
