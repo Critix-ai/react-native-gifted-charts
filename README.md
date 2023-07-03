@@ -1,3 +1,15 @@
+### This is fork of original [react-native-gifted-charts](https://github.com/Abhinandan-Kushwaha/react-native-gifted-charts/) without "react-native-svg" as a direct dependency of the package. It is a workaround for an Expo error on Android, that is happening if you have installed "react-native-svg" as a direct dependency of your project, and as a dependency of a dependency.
+
+```
+Invariant Violation: requireNativeComponent: "RNSVGSvgViewAndroid" was not found in the UIManager.
+```
+
+## Installation
+
+```sh
+npm install https://github.com/Critix-ai/react-native-gifted-charts
+```
+
 # react-native-gifted-charts [![Rate on Openbase](https://badges.openbase.com/js/rating/react-native-gifted-charts.svg)](https://openbase.com/js/react-native-gifted-charts?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
 
 The most complete library for Bar, Line, Area, Pie, Donut and Stacked Bar charts in React Native. Allows 2D, 3D, gradient, animations and live data updates.
@@ -38,19 +50,8 @@ However, we are planning to add support for web which will be available soon.
 ---
 
 ## Version 1.2.x 🎉
+
 Version 1.2.0 onwards we are dependent only on `react-native-svg` and `react-native-linear-gradient`. Earlier, Pie and Donut charts were rendered using `react-native-canvas`, but now they are also rendered using <b>svg</b>. We are no longer using `react-native-canvas` neither `react-native-webview`!
-
-## Installation
-
-```sh
-npm install react-native-gifted-charts react-native-linear-gradient react-native-svg
-```
-
-For iOS-
-
-```sh
-cd ios && pod install
-```
 
 # Docs
 
@@ -101,11 +102,11 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
 ## Common issues
 
-| Issue                                                                                                                        | Solution                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [BarChart - Value and section line don't match](https://github.com/Abhinandan-Kushwaha/react-native-gifted-charts/issues/35) | [Comment by the owner](https://github.com/Abhinandan-Kushwaha/react-native-gifted-charts/issues/35#issuecomment-972673281)                                                  |
-| Setting `height`, `maxValue`, `stepValue`, `stepHeight`, or `noOfSections` breaks the chart                                  | Please make sure that<br/> `maxValue = noOfSections * stepValue;` <br/>is followed. [See this](https://github.com/Abhinandan-Kushwaha/react-native-gifted-charts/issues/71) |
-| Charts with datasets having negative values (4th quadrant) break https://github.com/Abhinandan-Kushwaha/react-native-gifted-charts/issues/261 | Not yest solved |
+| Issue                                                                                                                                         | Solution                                                                                                                                                                    |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [BarChart - Value and section line don't match](https://github.com/Abhinandan-Kushwaha/react-native-gifted-charts/issues/35)                  | [Comment by the owner](https://github.com/Abhinandan-Kushwaha/react-native-gifted-charts/issues/35#issuecomment-972673281)                                                  |
+| Setting `height`, `maxValue`, `stepValue`, `stepHeight`, or `noOfSections` breaks the chart                                                   | Please make sure that<br/> `maxValue = noOfSections * stepValue;` <br/>is followed. [See this](https://github.com/Abhinandan-Kushwaha/react-native-gifted-charts/issues/71) |
+| Charts with datasets having negative values (4th quadrant) break https://github.com/Abhinandan-Kushwaha/react-native-gifted-charts/issues/261 | Not yest solved                                                                                                                                                             |
 
 ## To-dos
 
